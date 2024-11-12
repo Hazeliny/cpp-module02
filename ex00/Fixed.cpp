@@ -3,21 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linyao <linyao@student.42barcelona.co      +#+  +:+       +#+        */
+/*   By: linyao <linyao@student.42barcelona.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:53:43 by linyao            #+#    #+#             */
-/*   Updated: 2024/11/12 14:29:58 by linyao           ###   ########.fr       */
+/*   Updated: 2024/11/12 23:24:31 by linyao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+const int Fixed::_fractionalBits = 8;
+
 Fixed::Fixed() : _fixedValue(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &other) : _fixedValue(other._fixedValue) {
+Fixed::Fixed(const Fixed &other) {
 	std::cout << "Copy constructor called" << std::endl;
+	*this = other;
 }
 
 Fixed &Fixed::operator=(const Fixed &other) {

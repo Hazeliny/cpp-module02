@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linyao <linyao@student.42barcelona.co      +#+  +:+       +#+        */
+/*   By: linyao <linyao@student.42barcelona.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:34:24 by linyao            #+#    #+#             */
-/*   Updated: 2024/11/12 11:53:34 by linyao           ###   ########.fr       */
+/*   Updated: 2024/11/12 23:21:46 by linyao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Fixed {
 	private:
 		int _fixedValue;
-		static const int _fractionalBits = 8;
+		static const int _fractionalBits;
 	public:
 		Fixed(void);
 		~Fixed(void);
