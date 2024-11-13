@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: linyao <linyao@student.42barcelona.co      +#+  +:+       +#+         #
+#    By: linyao <linyao@student.42barcelona.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:25:58 by linyao            #+#    #+#              #
-#    Updated: 2024/11/12 16:10:51 by linyao           ###   ########.fr        #
+#    Updated: 2024/11/13 14:12:16 by linyao           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fp
-CC = c++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 RM = rm -rf
 
@@ -22,10 +22,10 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	
 %.o: %.cpp $(INC)
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
